@@ -12,7 +12,7 @@ function Contact() {
         cName="hero-middle"
         heroImg={AboutImg}
         title="Contact Us"
-        text="We’d love to hear from you."
+        text="Let us help you plan your next unforgettable journey."
         buttonText=""
       />
       <ContactForm />

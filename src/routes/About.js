@@ -11,8 +11,8 @@ function About() {
       <Hero
         cName="hero-middle"
         heroImg={AboutImg}
-        title="About"
-        text="We create meaningful travel experiences."
+        title="About Trippy Tour"
+        text="We create meaningful travel experiences shaped by comfort, culture, and discovery."
         buttonText=""
       />
       <AboutUs img={AboutImg} />

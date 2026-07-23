@@ -11,8 +11,8 @@ function Service() {
       <Hero
         cName="hero-middle"
         heroImg={AboutImg}
-        title="Services"
-        text="Browse our curated travel packages."
+        title="Our Services"
+        text="Explore curated packages built for comfort, adventure, and memorable escapes."
         buttonText=""
       />
       <Trip />
