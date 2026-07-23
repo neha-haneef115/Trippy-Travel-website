@@ -1,0 +1,81 @@
+.destination {
+  padding: 70px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.destination-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.destination-heading h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.destination-heading p {
+  color: #666;
+}
+
+.destination-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin: 30px 0;
+  align-items: center;
+}
+
+.destination-card.reverse .des-text {
+  order: 2;
+}
+
+.des-text {
+  padding: 10px 0;
+}
+
+.des-text h2 {
+  margin-bottom: 12px;
+  color: #222;
+  font-size: 1.5rem;
+}
+
+.des-text p {
+  line-height: 1.8;
+  color: #666;
+}
+
+.image-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.image-group img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+@media screen and (max-width: 850px) {
+  .destination {
+    padding: 60px 24px;
+  }
+
+  .destination-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .destination-card.reverse .des-text {
+    order: 0;
+  }
+
+  .image-group img {
+    height: 220px;
+  }
+}
+
