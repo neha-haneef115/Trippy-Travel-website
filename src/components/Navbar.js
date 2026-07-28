@@ -1,14 +1,13 @@
 import { useState } from "react";
-import "./NavbarStyles.css";
 import { MenuItems } from "./MenuItems";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 function Navbar() {
   const [clicked, setClicked] = useState(false);
 
   return (
     <nav className="NavbarItems">
-      <Link className="navbar-logo" to="/">
+      <Link className="navbar-logo" href="/">
         Trippy<span>Tour</span>
       </Link>
 
@@ -19,7 +18,7 @@ function Navbar() {
       <ul className={clicked ? "nav-menu active" : "nav-menu"}>
         {MenuItems.map((item, index) => (
           <li key={index}>
-            <Link className={item.cName} to={item.url}>
+            <Link className={item.cName} href={item.url}>
               {item.title}
             </Link>
           </li>

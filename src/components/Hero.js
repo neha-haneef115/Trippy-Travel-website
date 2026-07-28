@@ -1,15 +1,17 @@
-import { Link } from "react-router-dom";
-import "./HeroStyles.css";
+import Link from "next/link";
+
+const getSrc = (image) =>
+  image && typeof image === "object" ? image.src || image.default || "" : image;
 
 function Hero(props) {
   return (
     <div className={props.cName}>
-      <img src={props.heroImg} alt="Hero" />
+      <img src={getSrc(props.heroImg)} alt="Hero" />
       <div className="hero-text">
         <h1>{props.title}</h1>
         <p>{props.text}</p>
         {props.buttonText && (
-          <Link className={`hero-btn ${props.btnClass}`} to={props.url}>
+          <Link className={`hero-btn ${props.btnClass}`} href={props.url}>
             {props.buttonText}
           </Link>
         )}

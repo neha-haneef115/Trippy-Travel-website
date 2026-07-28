@@ -1,5 +1,7 @@
 import { Component } from "react";
-import "./DestinationStyles.css";
+
+const getSrc = (image) =>
+  image && typeof image === "object" ? image.src || image.default || "" : image;
 
 class DestinationData extends Component {
   render() {
@@ -11,8 +13,8 @@ class DestinationData extends Component {
         </div>
 
         <div className="image-group">
-          <img src={this.props.img1} alt="Destination" />
-          <img src={this.props.img2} alt="Destination" />
+          <img src={getSrc(this.props.img1)} alt="Destination" />
+          <img src={getSrc(this.props.img2)} alt="Destination" />
         </div>
       </div>
     );

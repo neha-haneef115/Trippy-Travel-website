@@ -1,9 +1,10 @@
-import "./AboutUsStyles.css";
+const getSrc = (image) =>
+  image && typeof image === "object" ? image.src || image.default || "" : image;
 
 function AboutUs(props) {
   return (
     <div className="about-container">
-      <img src={props.img} alt="About" />
+      <img src={getSrc(props.img)} alt="About" />
       <div className="about-text">
         <h1>Our Story</h1>
         <p>
